@@ -122,16 +122,16 @@ spec:
           repoBranchName: ${{ parameters.repoBranchName }}
         targetPath: ./gitops
 
-#    - id: publish
-#      name: Publishing to the Config Code Repository
-#      action: publish:github
-#      input:
-#        allowedHosts: ['github.com']
-#        description: ${{ parameters.description }}
-#        repoUrl: github.com?owner=${{ parameters.orgName }}&repo=${{ parameters.appName }}-config
-#        defaultBranch: ${{ parameters.repoBranchName }}
-#        sourcePath: ./gitops
-#        repoVisibility: public
+    - id: publish
+      name: Publishing to the Config Code Repository
+      action: publish:github
+      input:
+        allowedHosts: ['github.com']
+        description: ${{ parameters.description }}
+        repoUrl: github.com?owner=${{ parameters.orgName }}&repo=${{ parameters.appName }}-config
+        defaultBranch: ${{ parameters.repoBranchName }}
+        sourcePath: ./gitops
+        repoVisibility: public
 
 #    - id: sonarqube
 #      name: Create a new project on Sonarcloud
@@ -153,24 +153,24 @@ spec:
 #        branch: 'master'
 #        visibility: 'public'
 
-#    - id: create-webhook
-#      name: Create GitHub Webhook
-#      action: github:webhook
-#      input:
-#        repoUrl: github.com?repo=${{ parameters.appName }}&owner=${{ parameters.orgName }}
-#        webhookUrl: http://el-${{ parameters.appName }}-${{ parameters.namespace }}.${{ parameters.clusterDomain }}
-#        contentType: 'json'
+    - id: create-webhook
+      name: Create GitHub Webhook
+      action: github:webhook
+      input:
+        repoUrl: github.com?repo=${{ parameters.appName }}&owner=${{ parameters.orgName }}
+        webhookUrl: http://el-${{ parameters.appName }}-${{ parameters.namespace }}.${{ parameters.clusterDomain }}
+        contentType: 'json'
         
-#    - id: create-argocd-resources
-#      name: Create ArgoCD Resources
-#      action: argocd:create-resources
-#      input:
-#        appName: ${{ parameters.appName }}
-#        argoInstance: master
-#        namespace: ${{ parameters.namespace }}
-#        repoUrl: https://github.com/${{ parameters.orgName }}/${{ parameters.appName }}-config.git
-#        path: 'manifests'
-#
+    - id: create-argocd-resources
+      name: Create ArgoCD Resources
+      action: argocd:create-resources
+      input:
+        appName: ${{ parameters.appName }}
+        argoInstance: master
+        namespace: ${{ parameters.namespace }}
+        repoUrl: https://github.com/${{ parameters.orgName }}/${{ parameters.appName }}-config.git
+        path: 'manifests'
+
   output:
     links:
       - title: Open the Source Code Repository
