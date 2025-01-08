@@ -6,7 +6,7 @@ metadata:
   annotations:
     janus-idp.io/tekton: ${{ values.appName }}
     #tektonci/build-namespace: ${{ values.namespace }}
-    github.com/project-slug: ${{ values.orgName }}/${{ values.appName }}
+    #github.com/project-slug: ${{ values.orgName }}/${{ values.appName }}
     backstage.io/kubernetes-id: ${{ values.appName }}
     backstage.io/techdocs-ref: dir:.
     argocd/app-name: ${{ values.appName }}
