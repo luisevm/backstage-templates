@@ -161,16 +161,16 @@ spec:
 #        webhookUrl: http://el-${{ parameters.appName }}-${{ parameters.namespace }}.${{ parameters.clusterDomain }}
 #        contentType: 'json'
         
-    - id: create-argocd-resources
-      name: Create ArgoCD Resources
-      action: argocd:create-resources
-      input:
-        appName: ${{ parameters.appName }}
-        argoInstance: master
-        namespace: ${{ parameters.namespace }}
-        repoUrl: https://github.com/${{ parameters.orgName }}/${{ parameters.appName }}-config.git
-        path: 'manifests'
-
+#    - id: create-argocd-resources
+#      name: Create ArgoCD Resources
+#      action: argocd:create-resources
+#      input:
+#        appName: ${{ parameters.appName }}
+#        argoInstance: master
+#        namespace: ${{ parameters.namespace }}
+#        repoUrl: https://github.com/${{ parameters.orgName }}/${{ parameters.appName }}-config.git
+#        path: 'manifests'
+#
   output:
     links:
       - title: Open the Source Code Repository
