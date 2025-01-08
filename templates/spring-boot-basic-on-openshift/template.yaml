@@ -179,5 +179,3 @@ spec:
       - title: Open the Catalog Info Component
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
-      - title: SonarQube project URL
-        url: ${{ steps['create-sonar-project'].output.projectUrl }}
