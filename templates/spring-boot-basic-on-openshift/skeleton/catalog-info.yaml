@@ -5,7 +5,7 @@ metadata:
   title: ${{ values.appName }}
   annotations:
     janus-idp.io/tekton: ${{ values.appName }}
-    tektonci/build-namespace: ${{ values.namespace }}
+    #tektonci/build-namespace: ${{ values.namespace }}
     github.com/project-slug: ${{ values.orgName }}/${{ values.appName }}
     backstage.io/kubernetes-id: ${{ values.appName }}
     backstage.io/techdocs-ref: dir:.
