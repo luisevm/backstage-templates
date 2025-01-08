@@ -36,7 +36,7 @@ spec:
         orgName:
           title: Organization name
           type: string
-          default: piomin
+          default: luisevm-do400-org
         appName:
           title: App name
           type: string
@@ -76,7 +76,7 @@ spec:
         clusterDomain:
           title: OpenShift Cluster Domain
           type: string
-          default: apps.piomin.eastus.aroapp.io
+          default: apps.rosa.lmartin-pub20.lmde.p3.openshiftapps.com
   steps:
     - id: sourceCodeTemplate
       name: Generating the Source Code Component
