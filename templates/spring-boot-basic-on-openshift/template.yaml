@@ -10,7 +10,6 @@ metadata:
     - maven
     - tekton
     - renovate
-    - sonarqube
     - openshift
     - argocd
 spec:
