@@ -10,7 +10,7 @@ metadata:
     backstage.io/kubernetes-id: ${{ values.appName }}
     backstage.io/techdocs-ref: dir:.
     argocd/app-name: ${{ values.appName }}
-    prometheus.io/rule: container_memory_usage_bytes{pod=~"${{ values.appName }}-.*"}|pod,rate(container_cpu_usage_seconds_total{pod=~"${{ values.appName }}-.*"}[5m])|pod
+    #prometheus.io/rule: container_memory_usage_bytes{pod=~"${{ values.appName }}-.*"}|pod,rate(container_cpu_usage_seconds_total{pod=~"${{ values.appName }}-.*"}[5m])|pod
   tags:
     - spring-boot
     - java
