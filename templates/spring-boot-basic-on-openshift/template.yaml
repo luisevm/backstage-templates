@@ -153,13 +153,13 @@ spec:
 #        branch: 'master'
 #        visibility: 'public'
 
-    - id: create-webhook
-      name: Create GitHub Webhook
-      action: github:webhook
-      input:
-        repoUrl: github.com?repo=${{ parameters.appName }}&owner=${{ parameters.orgName }}
-        webhookUrl: http://el-${{ parameters.appName }}-${{ parameters.namespace }}.${{ parameters.clusterDomain }}
-        contentType: 'json'
+#    - id: create-webhook
+#      name: Create GitHub Webhook
+#      action: github:webhook
+#      input:
+#        repoUrl: github.com?repo=${{ parameters.appName }}&owner=${{ parameters.orgName }}
+#        webhookUrl: http://el-${{ parameters.appName }}-${{ parameters.namespace }}.${{ parameters.clusterDomain }}
+#        contentType: 'json'
         
     - id: create-argocd-resources
       name: Create ArgoCD Resources
