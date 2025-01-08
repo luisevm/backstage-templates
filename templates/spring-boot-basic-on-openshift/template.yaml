@@ -14,7 +14,7 @@ metadata:
     - openshift
     - argocd
 spec:
-  owner: piomin
+  owner: user1
   system: microservices
   type: service
 
@@ -52,11 +52,11 @@ spec:
         groupId:
           title: Maven Group ID
           type: string
-          default: pl.piomin.services
+          default: pl.user1.services
         javaPackage:
           title: Java package directory
           type: string
-          default: pl/piomin/services
+          default: pl/user1/services
         apiPath:
           title: REST API path
           type: string
