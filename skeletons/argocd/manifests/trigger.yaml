@@ -32,9 +32,9 @@ spec:
                 resources:
                   requests:
                     storage: 1Gi
-          - name: sonar-settings
-            secret:
-              secretName: sonarqube-secret-token
+#          - name: sonar-settings
+#            secret:
+#              secretName: sonarqube-secret-token
           - configMap:
               name: maven-settings
             name: maven-settings
