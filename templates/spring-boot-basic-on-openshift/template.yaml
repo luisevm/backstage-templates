@@ -122,16 +122,16 @@ spec:
           repoBranchName: ${{ parameters.repoBranchName }}
         targetPath: ./gitops
 
-    - id: publish
-      name: Publishing to the Config Code Repository
-      action: publish:github
-      input:
-        allowedHosts: ['github.com']
-        description: ${{ parameters.description }}
-        repoUrl: github.com?owner=${{ parameters.orgName }}&repo=${{ parameters.appName }}-config
-        defaultBranch: ${{ parameters.repoBranchName }}
-        sourcePath: ./gitops
-        repoVisibility: public
+#    - id: publish
+#      name: Publishing to the Config Code Repository
+#      action: publish:github
+#      input:
+#        allowedHosts: ['github.com']
+#        description: ${{ parameters.description }}
+#        repoUrl: github.com?owner=${{ parameters.orgName }}&repo=${{ parameters.appName }}-config
+#        defaultBranch: ${{ parameters.repoBranchName }}
+#        sourcePath: ./gitops
+#        repoVisibility: public
 
 #    - id: sonarqube
 #      name: Create a new project on Sonarcloud
