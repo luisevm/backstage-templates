@@ -75,7 +75,7 @@ spec:
         clusterDomain:
           title: OpenShift Cluster Domain
           type: string
-          default: apps.rosa.lmartin-pub20.lmde.p3.openshiftapps.com
+          default: apps.rosa.lmartin-pub21.gjlu.p3.openshiftapps.com
   steps:
     - id: sourceCodeTemplate
       name: Generating the Source Code Component
