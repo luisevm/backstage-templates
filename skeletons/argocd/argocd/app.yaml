@@ -6,7 +6,7 @@ spec:
   project: default
   source:
     path: manifests
-    repoURL: https://github.com/${{ parameters.orgName }}/${{ parameters.appName }}-config.git
+    repoURL: https://github.com/${{ values.orgName }}/${{ values.appName }}-config.git
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
