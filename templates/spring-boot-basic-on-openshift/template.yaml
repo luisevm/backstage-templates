@@ -166,7 +166,7 @@ spec:
       action: argocd:create-resources
       input:
         appName: ${{ parameters.appName }}
-        argoInstance: openshift-gitops
+        argoInstance: master
         namespace: ${{ parameters.namespace }}
         repoUrl: https://github.com/${{ parameters.orgName }}/${{ parameters.appName }}-config.git
         path: 'manifests'
